@@ -9,7 +9,7 @@ pipeline {
 //                 sh 'chmod +x ./setup_k6.sh'
 //                 sh './setup_k6.sh'
                 echo 'Running K6 performance tests...'
-                sh 'k6 run loadtests/grpc-test.js'
+                sh 'k6 run loadtests/performance-test.js'
             }
         }
         stage('Performance Testing gRPC') {
@@ -20,7 +20,7 @@ pipeline {
 //                 sh 'chmod +x ./setup_k6.sh'
 //                 sh './setup_k6.sh'
                 echo 'Running K6 performance tests...'
-                sh 'k6 run loadtests/hello-proto.js'
+                sh 'k6 run loadtests/grpc-test.js'
             }
         }
     }
